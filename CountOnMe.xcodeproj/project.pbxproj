@@ -81,14 +81,11 @@
 		69F0F9BE22C3CE7200BBCF6C /* CountOnMe */ = {
 			isa = PBXGroup;
 			children = (
-				69F0F9BF22C3CE7200BBCF6C /* AppDelegate.swift */,
-				69F0F9DF22C3CEF800BBCF6C /* ViewController.swift */,
-				69F0F9E122C3CF0000BBCF6C /* Calculator.swift */,
-				6951221622D3AC11006B2D73 /* Extension.swift */,
-				69F0F9C322C3CE7200BBCF6C /* Main.storyboard */,
-				69F0F9C622C3CE7300BBCF6C /* Assets.xcassets */,
-				69F0F9C822C3CE7300BBCF6C /* LaunchScreen.storyboard */,
-				69F0F9CB22C3CE7300BBCF6C /* Info.plist */,
+				6E34FC8922D4B15B00A5E58A /* Model */,
+				6E34FC8A22D4B17A00A5E58A /* View */,
+				6E34FC8B22D4B18F00A5E58A /* Controller */,
+				6E34FC8C22D4B1C200A5E58A /* Others */,
+				6E34FC8D22D4B1FA00A5E58A /* Supporting files */,
 			);
 			path = CountOnMe;
 			sourceTree = "<group>";
@@ -100,6 +97,49 @@
 				69F0F9D622C3CE7300BBCF6C /* Info.plist */,
 			);
 			path = CountOnMeTests;
+			sourceTree = "<group>";
+		};
+		6E34FC8922D4B15B00A5E58A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				69F0F9E122C3CF0000BBCF6C /* Calculator.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6E34FC8A22D4B17A00A5E58A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				69F0F9C322C3CE7200BBCF6C /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6E34FC8B22D4B18F00A5E58A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				69F0F9DF22C3CEF800BBCF6C /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6E34FC8C22D4B1C200A5E58A /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				6951221622D3AC11006B2D73 /* Extension.swift */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		6E34FC8D22D4B1FA00A5E58A /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				69F0F9C622C3CE7300BBCF6C /* Assets.xcassets */,
+				69F0F9BF22C3CE7200BBCF6C /* AppDelegate.swift */,
+				69F0F9CB22C3CE7300BBCF6C /* Info.plist */,
+				69F0F9C822C3CE7300BBCF6C /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -370,7 +410,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6QDN94WAYA;
-				INFOPLIST_FILE = CountOnMe/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CountOnMe/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -388,7 +428,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6QDN94WAYA;
-				INFOPLIST_FILE = CountOnMe/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CountOnMe/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

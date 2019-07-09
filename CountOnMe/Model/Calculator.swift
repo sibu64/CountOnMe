@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum Operator: String {
+enum OperatorOrDot: String {
     case addition = "+"
     case soustraction = "-"
     case multiplication = "*"
@@ -21,12 +21,12 @@ class Calculator {
     // Collection of displayed elements like numbers or operators
     public private(set) var elements = [String]()
     
-    // Return the last element of elements
+    // Returns the last element of elements
     private var lastElement: String? {
         return elements.last
     }
     
-    // Return correct formatted expression of elements
+    // Returns correct formatted expression of elements
     public var expression: String {
         return elements.joined()
     }
@@ -34,7 +34,7 @@ class Calculator {
     @discardableResult
     // Add numbers or operands if possible and return true or false for interact with ui
     public func add(_ element: String) ->Bool {
-        if addOperator(element) {
+        if addOperatorOrDot(element) {
             element == "x" ?
                 self.elements.append("*") :
                 self.elements.append(element)
@@ -50,7 +50,7 @@ class Calculator {
     }
     
     @discardableResult
-    // Return the double result of expression with 2 decimals
+    // Returns the double result of expression with 2 decimals
     public func calculate() ->Double? {
         guard let lastElement = self.lastElement else { return nil }
         if isOperatorOrDot(lastElement) == true { return nil }
@@ -71,7 +71,7 @@ class Calculator {
     // MARK: - Private Methods
     // ***********************************************
     // Check if operator can be added. If yes return true.
-    private func addOperator(_ value: String) ->Bool {
+    private func addOperatorOrDot(_ value: String) ->Bool {
         if isOperatorOrDot(value) {
             if canAddOperator() {
                 return true
@@ -120,7 +120,7 @@ class Calculator {
     
     // Check if is an operator or dot. If yes return true.
     private func isOperatorOrDot(_ value: String) ->Bool {
-        guard let operand = Operator(rawValue: value) else {
+        guard let operand = OperatorOrDot(rawValue: value) else {
             return false
         }
         switch operand {
