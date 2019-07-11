@@ -1,12 +1,13 @@
 import UIKit
 
-class ViewController: UIViewController  {
+class ViewController: UIViewController, UITextFieldDelegate  {
     
     let model = Calculator()
     
     // Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.textView.delegate = self as? UITextViewDelegate
         
     }
     
@@ -16,6 +17,13 @@ class ViewController: UIViewController  {
             textView.font = UIFont.systemFont(ofSize: textView.frame.height/4)
         }
     }
+    
+    //Hide Keyboard when user touches outside keyboard
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+        super.touchesBegan(touches, with: event)
+    }
+    
     
     @IBOutlet var numberButtons: [UIButton]!
     
